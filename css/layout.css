@@ -1,6 +1,8 @@
 body {
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	background-color: #1d1d1d;
+	font-size: 11pt;
+	color: #aaaaaa;
 }
 
 header {
@@ -9,30 +11,83 @@ header {
 	margin-top: 20px;
 }
 
+hr {
+	clear: both;
+	float: left;
+	color: #c56b28;
+	height: 1px;
+	width: 100%;
+	border-top: 2px solid #c56b28;
+	margin-top: 30px;
+	margin-bottom: 30px; border-bottom : none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
 footer {
 	margin-top: 50px;
 	width: 100%;
 }
 
 article {
-	width: 950px;
+	clear: both; width : 950px;
 	margin-left: auto;
 	margin-right: auto;
 	color: #dddddd;
+	width: 950px;
+}
+
+#navMenu {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	height: 60px;
+	background-color: #000000;
+}
+
+#navMenu .bar {
+	margin-left: auto;
+	margin-right: auto;
+	width: 950px;
 }
 
 h1 {
-	color: #1a91a7;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 1.1em;
+	color: #eeeeee;
 	text-shadow: 2px 2px 2px #000000;
+	border-bottom: 2px solid #c56b28;
 }
 
 h2 {
-	color: #c66a29;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 1.1em;
+	font-weight: normal;
+	color: #eeeeee;
 	text-shadow: 2px 2px 2px #000000;
+	border-bottom: 2px solid #c56b28;
+}
+
+p {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 a {
 	color: #1a91a7;
+}
+
+nav {
+	float: right;
+}
+
+img.logo {
+	clear: left;
+	float: left;
+	padding-top: 14px;
 }
 
 a:visited {
@@ -54,7 +109,6 @@ a:visited {
 .person {
 	clear: both;
 	float: left;
-	margin-bottom: 50px;
 }
 
 .person .imageWrapper {
@@ -80,21 +134,41 @@ nav a {
 	padding-bottom: 3px;
 	margin-right: 10px;
 	color: #1a91a7;
-	border-top: 2px solid #c66a29;
-	border-left: 2px solid #c66a29;
-	border-right: 2px solid #c66a29;
-	border-bottom: 2px solid #c66a29;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
-	box-shadow: 2px 2px 2px #000000;
 	text-decoration: none;
-	font-size: 1.3em;
-	text-shadow: 2px 2px 2px #000000;
+	font-size: 1.1em;
 	font-weight: bold;
 }
 
 nav a:visited {
 	color: #1a91a7;
+}
+
+#imageList {
+	list-style-type: none;
+	width: 100%;
+	padding: 0px;
+}
+
+#imageList li img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #1c8fa1;
+}
+
+#imageListSelector {
+	width: 100%;
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	margin-bottom: 50px;
+}
+
+
+#imageListSelector li {
+	display: inline;
+}
+
+#imageListSelector li a {
+	text-decoration: none;
 }

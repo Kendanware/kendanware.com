@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
     <head>
-        <title>Kendanware News</title>
+        <title>Kendanware</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="css/layout.css" />
         <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
@@ -25,6 +26,46 @@
 		<meta name="description" content="Kendanware is an indie game development studio with a focus on management and simulation games." />
 		<meta name="keywords" content="Kendanware, indie game, indie game studio, management and simulation games" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>
+		
+		var imageListIndex = 0;
+		var lastImageListIndex = 0;
+		var changeTimeout = null;
+		function changeImage(){
+			selectImage(imageListIndex++);
+			changeTimeout = setTimeout(function() {changeImage();}, 5000);
+		}
+		
+		function selectImage(index) {
+			if(changeTimeout != null) {
+				clearTimeout(changeTimeout);
+			}
+			
+			$("#imageList li").eq(lastImageListIndex % $("#imageList li").length).hide();
+			lastImageListIndex = index % $("#imageList li").length;
+			$("#imageList li").eq(lastImageListIndex).show();
+		}
+
+		setTimeout(function() {changeImage();}, 5000);
+		
+		$(document).ready(function() {
+			var first = true;
+			console.log("Called! " + $("#imageList li").length);
+			for(var i = 0; i < $("#imageList li").length; i++) {
+				console.log("Fix: " + i);
+				if(first) {
+					first = false;
+				} else {
+					$("#imageListSelector").append(', ');
+				}
+				
+				$("#imageListSelector").append('<li><a href="javascript:onclick(selectImage(' + i + '))">' + (i+1) + '</a></li>');
+			}	
+		});
+		
+		
+		</script>
+		
     </head>
     <body>
 <div id="fb-root"></div>
@@ -46,20 +87,36 @@
   ga('send', 'pageview');
 
 </script>
+	<div id="navMenu">
+		<div class="bar">
+			<img class="logo" src="images/kendanware-logo-banner-transparent-182x38.png" style="margin: auto; width: 182px; height: 38px" alt="Kendanware"/>
+		
+			<nav>
+				<a href="index.html">News</a>
+				<a href="http://hub.kendanware.com/c/skylimit-tycoon">Skylimit Tycoon</a>
+				<a href="http://hub.kendanware.com/">Community</a>
+				<a href="http://hub.kendanware.com/c/kendanware/opportunities">Opportunities</a>
+				<a href="about.html">About</a>
+			</nav>
+		</div>	
+	</div>
+
 	<article>
-        <header>
-			<img src="images/950x150-kendanware-banner.jpg" style="margin: auto; width: 950px; height: 150px" alt="Kendanware"/>
-		<h1>News</h1>
+		
+		<ul id="imageList">
+			<li><img src="images/items/KendanwareSkylimitTycoon3.png"/></li>
+			<li style="display: none;"><img src="images/items/screenshot14.png"/></li>
+			<li style="display: none;"><img src="images/items/screenshot17.png"/></li>
+			<li style="display: none;"><img src="images/items/screenshot18.png"/></li>
+		</ul>
+		
+		<ul id="imageListSelector">
+		</ul>
+		
+		<header>
+        	<h1>News</h1>
 		</header>
-		
-		<nav>
-			<a href="index.html">News</a>
-			<a href="http://hub.kendanware.com/c/skylimit-tycoon">Skylimit Tycoon</a>
-			<a href="http://hub.kendanware.com/">Community</a>
-			<a href="http://hub.kendanware.com/c/kendanware/opportunities">Opportunities</a>
-			<a href="about.html">About</a>
-		</nav>
-		
+
 		<div>
 			<div style="width:450px; clear:left; float:left;">
 			
@@ -69,11 +126,11 @@
 	        <div style="width:450px; float:left;">
 	        	<p style="padding-left:25px;">Kendanware is an indie game development studio with a focus on management and simulation games.</p>
 	        
-				<div class="indiedb" style="clear:both">
+				<div class="indiedb" style="clear:left">
 					<a href="http://www.indiedb.com/company/kendanware" title="View Kendanware on Indie DB" target="_blank" style="margin-left: 10px"><img src="http://button.indiedb.com/popularity/medium/groups/19018.png" alt="Kendanware" /></a>
 				</div>
 				
-	        	<div style="clear: both; float:left" class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="350" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+	        	<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="350" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
 	        </div>
         </div>
 	</article>
