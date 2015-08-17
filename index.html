@@ -34,7 +34,7 @@
 		var changeTimeout = null;
 		function changeImage(){
 			selectImage(imageListIndex++);
-			changeTimeout = setTimeout(function() {changeImage();}, 5000);
+			changeTimeout = setTimeout(function() {changeImage();}, 3000);
 		}
 		
 		function selectImage(index) {
@@ -42,18 +42,18 @@
 				clearTimeout(changeTimeout);
 			}
 			
-			$("#imageList li").eq(lastImageListIndex % $("#imageList li").length).hide();
+			$("#imageListSelector li a").eq(lastImageListIndex).css('color','#1a91a7');
+			$("#imageList li").eq(lastImageListIndex).hide();
 			lastImageListIndex = index % $("#imageList li").length;
 			$("#imageList li").eq(lastImageListIndex).show();
+			$("#imageListSelector li a").eq(lastImageListIndex).css('color', '#c56b28');
 		}
 
-		setTimeout(function() {changeImage();}, 5000);
+		setTimeout(function() {changeImage();}, 3000);
 		
 		$(document).ready(function() {
 			var first = true;
-			console.log("Called! " + $("#imageList li").length);
 			for(var i = 0; i < $("#imageList li").length; i++) {
-				console.log("Fix: " + i);
 				if(first) {
 					first = false;
 				} else {
@@ -61,7 +61,9 @@
 				}
 				
 				$("#imageListSelector").append('<li><a href="javascript:onclick(selectImage(' + i + '))">' + (i+1) + '</a></li>');
-			}	
+			}
+			
+			selectImage(0);
 		});
 		
 		
