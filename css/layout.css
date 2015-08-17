@@ -94,12 +94,6 @@ a:visited {
 	color: #c66a29;
 }
 
-.fb-like, .twitter {
-	float: left;
-	width: 200px;
-	text-align: center;
-}
-
 .indiedb {
 	float: left;
 	width: 300px;
@@ -120,6 +114,17 @@ a:visited {
 .person .description {
 	float: left;
 	width: 60%;
+}
+
+.social {
+	float: left;
+}
+
+.social img {
+	margin-top: 23px;
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
 }
 
 nav {
