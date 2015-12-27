@@ -1,0 +1,13 @@
+<div ng-repeat="article in articles">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">{{ article.title }}</h2>
+            <p class="lead"></p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+            <img class="featurette-image img-responsive center-block" data-src="https://hub.kendanware.com{{ article.image_url }}" alt="{{ article.title }}">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+</div>

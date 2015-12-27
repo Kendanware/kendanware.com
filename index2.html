@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+    <head>
+        <title>Kendanware - Making video games since 2014</title>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png" />
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192" />
+		<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+		<link rel="manifest" href="manifest.json" />
+
+		<meta name="msapplication-TileColor" content="#1d1d1d" />
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+		<meta name="theme-color" content="#1d1d1d" />
+		<meta charset="utf-8" />
+
+		<meta name="description" content="Kendanware is an indie game development studio with a focus on management and simulation games." />
+		<meta name="keywords" content="Kendanware, indie game, indie game studio, management and simulation games" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+		<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<link href="css/carousel.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+
+        <style>
+            .item1 {
+                background: url('images/items/20151226-215823.png') no-repeat center center fixed;
+            }
+
+            .item2 {
+                background: url('images/items/20151226-215739.png') no-repeat center center fixed;
+            }
+
+            .item3 {
+                background: url('images/items/20151224-224055.png') no-repeat center center fixed;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="navbar-wrapper">
+            <div class="container">
+                <nav class="navbar navbar-inverse navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">
+                                <img alt="Kendanware" src="images/kendanware-logo-banner-transparent-182x38.png" />
+                            </a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Community</a></li>
+                                <li><a href="#contact">Skylimit Tycoon</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+
+        <!-- Carousel
+        ================================================== -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active item1"></div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+            </div>
+        </div><!-- /.carousel -->
+
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+            <div ng-view></div>
+
+            <footer>
+                <p class="pull-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2016 Kendanware &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </footer>
+
+        </div>
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/app/application.js"></script>
+        <script src="js/app/controllers.js"></script>
+    </body>
+</html>
