@@ -10,6 +10,14 @@ application.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/home.html',
             controller: 'HomeController'
         }).
+        when('/devlog', {
+            templateUrl: 'views/devlog.html',
+            controller: 'DevLogController'
+        }).
+        when('/team', {
+            templateUrl: 'views/team.html',
+            controller: 'TeamController'
+        }).
         otherwise({
             redirectTo: '/'
         });
