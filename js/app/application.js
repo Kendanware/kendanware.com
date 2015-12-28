@@ -4,7 +4,6 @@ var application = angular.module('application', [
   'ApplicationControllers'
 ]);
 
-
 application.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/', {
