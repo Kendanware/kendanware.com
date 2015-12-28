@@ -21,6 +21,10 @@ controllers.controller('PageController', ['$scope', '$location', function ($scop
             return '';
         }
     }
+
+    $scope.formatDate = function(dateString) {
+        return moment(dateString).fromNow();
+    };
 }]);
 
 controllers.controller('HomeController', ['$scope', function ($scope) {

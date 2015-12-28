@@ -12,6 +12,7 @@
 
         <div class="col-md-8">
             <h2 class="media-heading">{{ article.title }}</h2>
+            <p>{{ formatDate(article.created_at) }}</p>
             <a href="#/devlog/{{ article.id }}">Find out more</a>
         </div>
     </div>
