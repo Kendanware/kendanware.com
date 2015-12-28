@@ -50,7 +50,7 @@ controllers.controller('DevLogArticleController', ['$scope', '$routeParams', '$h
         $scope.title = data.title;
 
         var content = data.post_stream.posts[0].cooked;
-        content = content.replace("<img","<img class='img-responsive'");
+        content = content.split("<img").join("<img class='img-responsive'");
 
         $scope.content = content;
     });
