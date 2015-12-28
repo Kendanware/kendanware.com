@@ -64,9 +64,9 @@
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#/">Home</a></li>
-                                <li><a href="#/team">Team</a></li>
-                                <li><a href="#/devlog">Dev Log</a></li>
+                                <li ng-class="activeIfPath('/')"><a href="#/">Home</a></li>
+                                <li ng-class="activeIfPath('/team')"><a href="#/team">Team</a></li>
+                                <li ng-class="activeIfPath('/devlog')"><a href="#/devlog">Dev Log</a></li>
                                 <li><a href="https://hub.kendanware.com" target="_blank"><i class="fa fa-external-link"></i> Community</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">

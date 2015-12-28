@@ -14,6 +14,10 @@ application.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/devlog.html',
             controller: 'DevLogController'
         }).
+        when('/devlog/:articleId', {
+            templateUrl: 'views/devlog-article.html',
+            controller: 'DevLogArticleController'
+        }).
         when('/team', {
             templateUrl: 'views/team.html',
             controller: 'TeamController'

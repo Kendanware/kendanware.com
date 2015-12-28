@@ -1,14 +1,18 @@
+<h1>Development Log</h1>
+
+<div class="well">
+    Want to know more about what we're currently working on? Then this is the place to be, check out our progress below.
+</div>
+
 <div ng-repeat="article in articles">
-    <div class="row featurette" ng-if="!article.pinned">
-        <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading">{{ article.title }}</h2>
-            <p class="lead"><a href="https://hub.kendanware.com/t/{{ article.slug }}">Read more</a></p>
+    <div class="row article" ng-if="!article.pinned">
+        <div class="col-md-4">
+            <img class="img-responsive img-rounded" src="{{ getImageUrl(article) }}" alt="{{ article.title }}">
         </div>
 
-        <div class="col-md-5 col-md-pull-7" ng-if="article.image_url">
-            <img class="featurette-image img-responsive center-block" src="https://hub.kendanware.com{{ article.image_url }}" alt="{{ article.title }}">
+        <div class="col-md-8">
+            <h2 class="media-heading">{{ article.title }}</h2>
+            <a href="#/devlog/{{ article.id }}">Find out more</a>
         </div>
     </div>
-
-    <hr class="featurette-divider">
 </div>
