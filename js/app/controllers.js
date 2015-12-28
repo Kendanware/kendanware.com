@@ -46,7 +46,7 @@ controllers.controller('DevLogController', ['$scope', '$http', function ($scope,
 }]);
 
 controllers.controller('DevLogArticleController', ['$scope', '$routeParams', '$http', function ($scope, $routeParams, $http) {
-    $http.get('https://hub.kendanware.com/t' + $routeParams.articleId + '.json').success(function(data) {
+    $http.get('https://hub.kendanware.com/t/' + $routeParams.articleId + '.json').success(function(data) {
         $scope.title = data.title;
         $scope.content = data.post_stream.posts[0].cooked;
     });
