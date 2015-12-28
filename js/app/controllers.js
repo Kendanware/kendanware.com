@@ -57,5 +57,6 @@ controllers.controller('DevLogArticleController', ['$scope', '$routeParams', '$h
         content = content.split("<img").join("<img class='img-responsive'");
 
         $scope.content = content;
+        $scope.created = data.created_at;
     });
 }]);
